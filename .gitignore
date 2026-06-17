@@ -1,0 +1,41 @@
+# OS / editor
+.DS_Store
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.python-version
+
+# uv
+.uv/
+
+# データ生成物
+data/
+
+# Terraform (state にはリソースARN や ID が入るためコミットしない)
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+
+# ローカル変数(認証情報・プロファイル名を含む可能性)
+*.tfvars
+!*.tfvars.example
+
+# 評価結果(再現可能なので git 管理しない)
+eval/results_*.json
+
+# 記事本文(別管理)
+articles/
+
+# 論文 PDF(公開元: Amazon Science)
+paper.pdf
+
+# 認証・キャッシュ
+.envrc
+.env
+.env.local
+.aws-sam/

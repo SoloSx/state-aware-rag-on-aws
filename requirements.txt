@@ -1,0 +1,9 @@
+# State-Aware RAG (AWS Bedrock 版) ランタイム依存
+boto3>=1.34.0
+# session/login ベースのプロファイル(your-aws-profile 等)を boto3 から直接使い、
+# 長時間実行でセッションを自動更新するために必要。
+botocore[crt]>=1.34.0
+
+# ローカル FAISS バックエンドを使う場合のみ必要（bedrock_kb 利用時は不要）
+faiss-cpu>=1.8.0
+numpy>=1.24.0
